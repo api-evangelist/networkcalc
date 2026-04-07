@@ -1,6 +1,7 @@
 aid: networkcalc
 name: NetworkCalc
-description: 'Effortlessly Monitor and Manage your Business Networks and Domains '
+description: >-
+  Effortlessly Monitor and Manage your Business Networks and Domains.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -15,7 +16,8 @@ specificationVersion: '0.19'
 apis:
   - aid: networkcalc:networkcalc
     name: NetworkCalc
-    description: 'Effortlessly Monitor and Manage your Business Networks and Domains '
+    description: >-
+      Effortlessly Monitor and Manage your Business Networks and Domains.
     humanURL: ' https://networkcalc.com/'
     tags:
       - API
