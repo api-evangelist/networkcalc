@@ -1,0 +1,123 @@
+openapi: 3.0.3
+info:
+  title: NetworkCalc API
+  description: >-
+    NetworkCalc provides RESTful APIs for network and security tools including
+    a subnet calculator, DNS tools, security tools (TLS/SSL inspection,
+    password generation), encoders, and a binary converter. The public APIs
+    return JSON responses over HTTPS and use common HTTP verbs.
+  version: "1.9"
+  contact:
+    name: NetworkCalc
+    url: https://networkcalc.com/
+servers:
+  - url: https://networkcalc.com/api
+    description: Production
+tags:
+  - name: Subnet Calculator
+    description: IPv4 and IPv6 subnet calculations.
+  - name: DNS
+    description: DNS lookups and record queries.
+  - name: Security
+    description: TLS/SSL certificate and security utilities.
+  - name: Encoder
+    description: Encoding and decoding helpers.
+  - name: Binary Converter
+    description: Binary, decimal, and hexadecimal conversions.
+paths:
+  /ip/{address}:
+    get:
+      tags:
+        - Subnet Calculator
+      summary: Subnet calculator (IPv4)
+      description: Calculate subnet details for a given IPv4 address with CIDR notation.
+      parameters:
+        - name: address
+          in: path
+          required: true
+          schema:
+            type: string
+          description: IPv4 address with CIDR mask, for example 192.168.1.0/24.
+      responses:
+        '200':
+          description: Subnet calculation result.
+  /ipv6/{address}:
+    get:
+      tags:
+        - Subnet Calculator
+      summary: Subnet calculator (IPv6)
+      description: Calculate subnet details for a given IPv6 address with CIDR notation.
+      parameters:
+        - name: address
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IPv6 subnet calculation result.
+  /dns/lookup/{domain}:
+    get:
+      tags:
+        - DNS
+      summary: DNS lookup
+      description: Perform a DNS lookup for the given domain.
+      parameters:
+        - name: domain
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: DNS records for the domain.
+  /security/scan/{host}:
+    get:
+      tags:
+        - Security
+      summary: SSL/TLS security scan
+      description: Inspect SSL/TLS certificate and security configuration for a host.
+      parameters:
+        - name: host
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Security scan result.
+  /encoder/{type}/{value}:
+    get:
+      tags:
+        - Encoder
+      summary: Encode or decode a value
+      description: Encode or decode a value using the specified encoding type (e.g. base64, url).
+      parameters:
+        - name: type
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: value
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Encoded or decoded result.
+  /binary/{value}:
+    get:
+      tags:
+        - Binary Converter
+      summary: Binary conversion
+      description: Convert a number between binary, decimal, and hexadecimal.
+      parameters:
+        - name: value
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Conversion result.
