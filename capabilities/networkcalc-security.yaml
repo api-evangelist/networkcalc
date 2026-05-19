@@ -1,0 +1,76 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: NetworkCalc API — Security
+  description: 'NetworkCalc API — Security. 1 operations. Lead operation: SSL/TLS security scan. Self-contained Naftiko capability
+    covering one Networkcalc business surface.'
+  tags:
+  - Networkcalc
+  - Security
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    NETWORKCALC_API_KEY: NETWORKCALC_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: networkcalc-security
+    baseUri: https://networkcalc.com/api
+    description: NetworkCalc API — Security business capability. Self-contained, no shared references.
+    resources:
+    - name: security-scan-host
+      path: /security/scan/{host}
+      operations:
+      - name: get
+        method: GET
+        description: SSL/TLS security scan
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: host
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: networkcalc-security-rest
+    port: 8080
+    description: REST adapter for NetworkCalc API — Security. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/security/scan/{host}
+      name: security-scan-host
+      description: REST surface for security-scan-host.
+      operations:
+      - method: GET
+        name: get
+        description: SSL/TLS security scan
+        call: networkcalc-security.get
+        with:
+          host: rest.host
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: networkcalc-security-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for NetworkCalc API — Security. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: ssl-tls-security-scan
+      description: SSL/TLS security scan
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: networkcalc-security.get
+      with:
+        host: tools.host
+      outputParameters:
+      - type: object
+        mapping: $.
