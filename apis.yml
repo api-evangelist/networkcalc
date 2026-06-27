@@ -47,15 +47,15 @@ apis:
     url: https://networkcalc.com/api/docs/encoder
   - type: Binary Converter Docs
     url: https://networkcalc.com/api/docs/binary-converter
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/networkcalc-binary-converter.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/networkcalc-dns.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/networkcalc-encoder.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/networkcalc-security.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/networkcalc-subnet-calculator.yaml
   contact:
   - FN: NetworkCalc
