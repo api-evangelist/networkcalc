@@ -61,6 +61,8 @@ apis:
   - FN: NetworkCalc
     url: https://networkcalc.com/
 common:
+- type: DomainSecurity
+  url: security/networkcalc-domain-security.yml
 - type: Website
   url: https://networkcalc.com/
 - type: Documentation
