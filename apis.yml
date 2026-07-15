@@ -61,6 +61,8 @@ apis:
   - FN: NetworkCalc
     url: https://networkcalc.com/
 common:
+- type: AgenticAccess
+  url: agentic-access/networkcalc-agentic-access.yml
 - type: DomainSecurity
   url: security/networkcalc-domain-security.yml
 - type: Website
