@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: NetworkCalc Binary Converter DNS API
+  description: NetworkCalc provides RESTful APIs for network and security tools including a subnet calculator, DNS tools, security tools (TLS/SSL inspection, password generation), encoders, and a binary converter. The public APIs return JSON responses over HTTPS and use common HTTP verbs.
+  version: '1.9'
+  contact:
+    name: NetworkCalc
+    url: https://networkcalc.com/
+servers:
+- url: https://networkcalc.com/api
+  description: Production
+tags:
+- name: DNS
+  description: DNS lookups and record queries.
+paths:
+  /dns/lookup/{domain}:
+    get:
+      tags:
+      - DNS
+      summary: DNS lookup
+      description: Perform a DNS lookup for the given domain.
+      parameters:
+      - name: domain
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: DNS records for the domain.

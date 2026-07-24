@@ -1,0 +1,46 @@
+openapi: 3.0.3
+info:
+  title: NetworkCalc Binary Converter Subnet Calculator API
+  description: NetworkCalc provides RESTful APIs for network and security tools including a subnet calculator, DNS tools, security tools (TLS/SSL inspection, password generation), encoders, and a binary converter. The public APIs return JSON responses over HTTPS and use common HTTP verbs.
+  version: '1.9'
+  contact:
+    name: NetworkCalc
+    url: https://networkcalc.com/
+servers:
+- url: https://networkcalc.com/api
+  description: Production
+tags:
+- name: Subnet Calculator
+  description: IPv4 and IPv6 subnet calculations.
+paths:
+  /ip/{address}:
+    get:
+      tags:
+      - Subnet Calculator
+      summary: Subnet calculator (IPv4)
+      description: Calculate subnet details for a given IPv4 address with CIDR notation.
+      parameters:
+      - name: address
+        in: path
+        required: true
+        schema:
+          type: string
+        description: IPv4 address with CIDR mask, for example 192.168.1.0/24.
+      responses:
+        '200':
+          description: Subnet calculation result.
+  /ipv6/{address}:
+    get:
+      tags:
+      - Subnet Calculator
+      summary: Subnet calculator (IPv6)
+      description: Calculate subnet details for a given IPv6 address with CIDR notation.
+      parameters:
+      - name: address
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: IPv6 subnet calculation result.

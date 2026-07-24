@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: NetworkCalc Binary Converter API
+  description: NetworkCalc provides RESTful APIs for network and security tools including a subnet calculator, DNS tools, security tools (TLS/SSL inspection, password generation), encoders, and a binary converter. The public APIs return JSON responses over HTTPS and use common HTTP verbs.
+  version: '1.9'
+  contact:
+    name: NetworkCalc
+    url: https://networkcalc.com/
+servers:
+- url: https://networkcalc.com/api
+  description: Production
+tags:
+- name: Binary Converter
+  description: Binary, decimal, and hexadecimal conversions.
+paths:
+  /binary/{value}:
+    get:
+      tags:
+      - Binary Converter
+      summary: Binary conversion
+      description: Convert a number between binary, decimal, and hexadecimal.
+      parameters:
+      - name: value
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Conversion result.
