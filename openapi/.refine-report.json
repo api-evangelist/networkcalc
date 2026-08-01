@@ -1,0 +1,22 @@
+{
+  "provider": "networkcalc",
+  "sources": [
+    "networkcalc-binary-converter-api-openapi.yml",
+    "networkcalc-dns-api-openapi.yml",
+    "networkcalc-encoder-api-openapi.yml",
+    "networkcalc-security-api-openapi.yml",
+    "networkcalc-subnet-calculator-api-openapi.yml"
+  ],
+  "outputs": [
+    "networkcalc-binary-converter-api-openapi.yml",
+    "networkcalc-dns-api-openapi.yml",
+    "networkcalc-encoder-api-openapi.yml",
+    "networkcalc-security-api-openapi.yml",
+    "networkcalc-subnet-calculator-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
