@@ -53,16 +53,6 @@ apis:
     url: https://networkcalc.com/api/docs/encoder
   - type: Binary Converter Docs
     url: https://networkcalc.com/api/docs/binary-converter
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-binary-converter.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-dns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-encoder.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-security.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-subnet-calculator.yaml
 - aid: networkcalc:networkcalc-dns-api
   name: NetworkCalc DNS API
   description: DNS lookups and record queries.
@@ -85,16 +75,6 @@ apis:
     url: https://networkcalc.com/api/docs/encoder
   - type: Binary Converter Docs
     url: https://networkcalc.com/api/docs/binary-converter
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-binary-converter.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-dns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-encoder.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-security.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-subnet-calculator.yaml
 - aid: networkcalc:networkcalc-encoder-api
   name: NetworkCalc Encoder API
   description: Encoding and decoding helpers.
@@ -117,16 +97,6 @@ apis:
     url: https://networkcalc.com/api/docs/encoder
   - type: Binary Converter Docs
     url: https://networkcalc.com/api/docs/binary-converter
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-binary-converter.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-dns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-encoder.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-security.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-subnet-calculator.yaml
 - aid: networkcalc:networkcalc-security-api
   name: NetworkCalc Security API
   description: TLS/SSL certificate and security utilities.
@@ -149,16 +119,6 @@ apis:
     url: https://networkcalc.com/api/docs/encoder
   - type: Binary Converter Docs
     url: https://networkcalc.com/api/docs/binary-converter
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-binary-converter.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-dns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-encoder.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-security.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-subnet-calculator.yaml
 - aid: networkcalc:networkcalc-subnet-calculator-api
   name: NetworkCalc Subnet Calculator API
   description: IPv4 and IPv6 subnet calculations.
@@ -181,16 +141,6 @@ apis:
     url: https://networkcalc.com/api/docs/encoder
   - type: Binary Converter Docs
     url: https://networkcalc.com/api/docs/binary-converter
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-binary-converter.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-dns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-encoder.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-security.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/networkcalc-subnet-calculator.yaml
 common:
 - type: AgenticAccess
   url: agentic-access/networkcalc-agentic-access.yml
