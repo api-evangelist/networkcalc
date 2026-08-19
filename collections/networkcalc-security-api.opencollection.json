@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NetworkCalc Binary Converter Security API",
+    "version": "1.9"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Security",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "SSL/TLS security scan",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkcalc.com/api/security/scan/:host",
+            "params": [
+              {
+                "name": "host",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Inspect SSL/TLS certificate and security configuration for a host."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

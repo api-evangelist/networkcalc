@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NetworkCalc Binary Converter Encoder API",
+    "version": "1.9"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Encoder",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Encode or decode a value",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkcalc.com/api/encoder/:type/:value",
+            "params": [
+              {
+                "name": "type",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "value",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Encode or decode a value using the specified encoding type (e.g. base64, url)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

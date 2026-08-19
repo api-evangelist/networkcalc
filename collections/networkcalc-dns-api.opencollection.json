@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NetworkCalc Binary Converter DNS API",
+    "version": "1.9"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DNS",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "DNS lookup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkcalc.com/api/dns/lookup/:domain",
+            "params": [
+              {
+                "name": "domain",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Perform a DNS lookup for the given domain."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

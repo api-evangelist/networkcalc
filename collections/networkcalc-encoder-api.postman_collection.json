@@ -1,0 +1,124 @@
+{
+  "item": [
+    {
+      "id": "e11bb28b-a9c5-4f15-90b7-163d1215a151",
+      "name": "Encoder",
+      "description": {
+        "content": "Encoding and decoding helpers.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7b373301-b7b0-48a1-bd65-0bd4900f3a81",
+          "name": "Encode or decode a value",
+          "request": {
+            "name": "Encode or decode a value",
+            "description": {
+              "content": "Encode or decode a value using the specified encoding type (e.g. base64, url).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "encoder",
+                ":type",
+                ":value"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "type",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "value",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7c57f292-2cad-4666-8012-3509b5fb36f5",
+              "name": "Encoded or decoded result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "encoder",
+                    ":type",
+                    ":value"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "type",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "value",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://networkcalc.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "de64820a-aa57-4962-9d8d-ac6211c557a4",
+    "name": "NetworkCalc Binary Converter Encoder API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NetworkCalc provides RESTful APIs for network and security tools including a subnet calculator, DNS tools, security tools (TLS/SSL inspection, password generation), encoders, and a binary converter. The public APIs return JSON responses over HTTPS and use common HTTP verbs.\n\nContact Support:\n Name: NetworkCalc",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "item": [
+    {
+      "id": "c393f1e2-4b73-485b-a21e-754763eb52cd",
+      "name": "Subnet Calculator",
+      "description": {
+        "content": "IPv4 and IPv6 subnet calculations.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "74c71f52-d541-4d1e-bcc7-f416c842d772",
+          "name": "Subnet calculator (IPv4)",
+          "request": {
+            "name": "Subnet calculator (IPv4)",
+            "description": {
+              "content": "Calculate subnet details for a given IPv4 address with CIDR notation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ip",
+                ":address"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) IPv4 address with CIDR mask, for example 192.168.1.0/24."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0a0ad527-4d3b-4521-baf9-6daed90ef343",
+              "name": "Subnet calculation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ip",
+                    ":address"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) IPv4 address with CIDR mask, for example 192.168.1.0/24."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fa7c946f-0947-4307-9d7a-867581a2f3ea",
+          "name": "Subnet calculator (IPv6)",
+          "request": {
+            "name": "Subnet calculator (IPv6)",
+            "description": {
+              "content": "Calculate subnet details for a given IPv6 address with CIDR notation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ipv6",
+                ":address"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "58d020f0-3c47-4eaf-8bc0-9c87d760ea1b",
+              "name": "IPv6 subnet calculation result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ipv6",
+                    ":address"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://networkcalc.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c145217b-abfd-4e77-9343-6c2414a3c42d",
+    "name": "NetworkCalc Binary Converter Subnet Calculator API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NetworkCalc provides RESTful APIs for network and security tools including a subnet calculator, DNS tools, security tools (TLS/SSL inspection, password generation), encoders, and a binary converter. The public APIs return JSON responses over HTTPS and use common HTTP verbs.\n\nContact Support:\n Name: NetworkCalc",
+      "type": "text/plain"
+    }
+  }
+}

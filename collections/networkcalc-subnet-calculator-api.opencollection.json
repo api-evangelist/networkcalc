@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NetworkCalc Binary Converter Subnet Calculator API",
+    "version": "1.9"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Subnet Calculator",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Subnet calculator (IPv4)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkcalc.com/api/ip/:address",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "path",
+                "description": "IPv4 address with CIDR mask, for example 192.168.1.0/24."
+              }
+            ]
+          },
+          "docs": "Calculate subnet details for a given IPv4 address with CIDR notation."
+        },
+        {
+          "info": {
+            "name": "Subnet calculator (IPv6)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkcalc.com/api/ipv6/:address",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Calculate subnet details for a given IPv6 address with CIDR notation."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,110 @@
+{
+  "item": [
+    {
+      "id": "b9fe40c2-38cc-4e7d-9a04-b4e04486361e",
+      "name": "DNS",
+      "description": {
+        "content": "DNS lookups and record queries.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f075d7bc-bd23-4a5a-a8be-a7b5497605b7",
+          "name": "DNS lookup",
+          "request": {
+            "name": "DNS lookup",
+            "description": {
+              "content": "Perform a DNS lookup for the given domain.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dns",
+                "lookup",
+                ":domain"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "domain",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c6fd9911-693a-40d5-bd6c-4655e233110e",
+              "name": "DNS records for the domain.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dns",
+                    "lookup",
+                    ":domain"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "domain",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://networkcalc.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "75ad9081-dd78-448c-8e4f-15a2ed19737b",
+    "name": "NetworkCalc Binary Converter DNS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NetworkCalc provides RESTful APIs for network and security tools including a subnet calculator, DNS tools, security tools (TLS/SSL inspection, password generation), encoders, and a binary converter. The public APIs return JSON responses over HTTPS and use common HTTP verbs.\n\nContact Support:\n Name: NetworkCalc",
+      "type": "text/plain"
+    }
+  }
+}

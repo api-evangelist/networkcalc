@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NetworkCalc Binary Converter API",
+    "version": "1.9"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Binary Converter",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Binary conversion",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://networkcalc.com/api/binary/:value",
+            "params": [
+              {
+                "name": "value",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Convert a number between binary, decimal, and hexadecimal."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

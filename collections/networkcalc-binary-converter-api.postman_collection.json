@@ -1,0 +1,108 @@
+{
+  "item": [
+    {
+      "id": "1111f8fb-c1c4-4937-8bee-3c530a2a0675",
+      "name": "Binary Converter",
+      "description": {
+        "content": "Binary, decimal, and hexadecimal conversions.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b1029deb-dab3-4bc6-b2ff-67864490adab",
+          "name": "Binary conversion",
+          "request": {
+            "name": "Binary conversion",
+            "description": {
+              "content": "Convert a number between binary, decimal, and hexadecimal.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "binary",
+                ":value"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "value",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "21951585-7e07-44eb-96bf-35ee438b56b8",
+              "name": "Conversion result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "binary",
+                    ":value"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "value",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://networkcalc.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "bdbda747-3b09-4746-93ab-5bb47d5f682f",
+    "name": "NetworkCalc Binary Converter API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NetworkCalc provides RESTful APIs for network and security tools including a subnet calculator, DNS tools, security tools (TLS/SSL inspection, password generation), encoders, and a binary converter. The public APIs return JSON responses over HTTPS and use common HTTP verbs.\n\nContact Support:\n Name: NetworkCalc",
+      "type": "text/plain"
+    }
+  }
+}
