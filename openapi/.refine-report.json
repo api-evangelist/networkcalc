@@ -1,11 +1,7 @@
 {
   "provider": "networkcalc",
   "sources": [
-    "networkcalc-binary-converter-api-openapi.yml",
-    "networkcalc-dns-api-openapi.yml",
-    "networkcalc-encoder-api-openapi.yml",
-    "networkcalc-security-api-openapi.yml",
-    "networkcalc-subnet-calculator-api-openapi.yml"
+    "_original/networkcalc-openapi-original.yaml"
   ],
   "outputs": [
     "networkcalc-binary-converter-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "networkcalc-openapi-original.yaml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "networkcalc-binary-converter-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "networkcalc-dns-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "networkcalc-encoder-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "networkcalc-security-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "networkcalc-subnet-calculator-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
