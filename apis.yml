@@ -38,7 +38,7 @@ tags:
 - Domains
 - Calculator
 created: '2025-02-09'
-modified: '2026-05-19'
+modified: '2026-10-06'
 url: https://raw.githubusercontent.com/api-evangelist/networkcalc/refs/heads/main/apis.yml
 specificationVersion: '0.23'
 apis:
@@ -153,6 +153,8 @@ apis:
   - type: Binary Converter Docs
     url: https://networkcalc.com/api/docs/binary-converter
 common:
+- url: https://networkcalc.com/articles/
+  type: Blog
 - type: AgenticAccess
   url: agentic-access/networkcalc-agentic-access.yml
 - type: DomainSecurity
